@@ -1,0 +1,47 @@
+@charset "utf-8";
+@import 'reset';
+
+body {
+    font: 17px/1.4 "obitron"; letter-spacing: 1px; color: #ddd; background-color: #000;
+
+    .wrap {
+       width: 100vw; height: 100vh; perspective: 1300px;
+       video {
+           position: fixed;
+           width: 100%; height: 100%; object-fit: cover; opacity: 0.5;
+       }
+
+       #circle {
+           position: absolute;
+           width: 30rem; height: 40rem; top: 50%; left: 50%; margin-top: -20rem; margin-left: -15rem;
+
+           article {
+               position: absolute;
+               width: 100%; height: 100%; top: 0; left: 0;
+               h1 {
+                   position: absolute;
+                   left: 0; top: 0; font-size: 30px; opacity: 0; transition: all 0.5s;
+               }
+               &:hover h1 {top: -3rem; opacity: 1;}
+
+               .inner {
+                   width: 100%;
+                   height: 100%;
+
+                   > div {
+                       position: relative;
+                       width: 100%; height: 100%;
+                       border: 1px solid rgba(255,255,255,0.5); box-sizing: border-box; background: rgba(255,255,255,0.06);
+                       padding: 50px; opacity: 0.7; overflow: hidden; cursor: pointer; transition: all 0.5s;
+
+                        &:hover {
+                            background: rgba(255,255,255,0.15);
+                            transform: scale(1.03);
+                            opacity: 1;
+                        }
+                   }
+               }
+           }
+       }
+    }
+}
