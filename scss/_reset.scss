@@ -1,5 +1,6 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
+$family: unquote("Orbitron");
+@import url("https://fonts.googleapis.com/css?family=#{$family}");
 
 * { 
     margin: 0;  
